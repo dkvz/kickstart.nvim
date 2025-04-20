@@ -46,7 +46,7 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
+vim.opt.updatetime = 100
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
@@ -933,6 +933,15 @@ vim.opt.background = 'dark'
 vim.opt.linebreak = true
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = 30
+-- Translating my very few custom keybinds from vim:
+vim.keymap.set('n', '<C-l>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('i', '<C-c>', '<Esc>')
+-- My old indent settings (sorry)
+vim.opt.tabstop = 2
+--vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
+vim.opt.smartindent = true
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
