@@ -789,21 +789,23 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    -- TODO Maybe try https://github.com/sainnhe/gruvbox-material
-    'folke/tokyonight.nvim',
+    --'folke/tokyonight.nvim',
+    'sainnhe/gruvbox-material',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
+      --[[require('gruvbox-material').setup {
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
-      }
+      }--]]
+      -- Disable italic comments for gruvbox material:
+      vim.g.gruvbox_material_disable_italic_comment = 1
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'gruvbox-material'
     end,
   },
 
@@ -920,6 +922,15 @@ require('lazy').setup({
     },
   },
 })
+
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
+vim.opt.background = 'dark'
+vim.opt.linebreak = true
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
