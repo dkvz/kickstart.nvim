@@ -931,6 +931,8 @@ vim.cmd [[
 ]]
 vim.opt.background = 'dark'
 vim.opt.linebreak = true
+vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 30
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
