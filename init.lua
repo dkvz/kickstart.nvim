@@ -938,8 +938,8 @@ vim.keymap.set('n', '<C-l>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('i', '<C-c>', '<Esc>')
 -- My old indent settings (sorry)
 vim.opt.tabstop = 2
---vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+--vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.smartindent = true
 
