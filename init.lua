@@ -591,8 +591,24 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
         phpactor= {},
-        --
-
+        --[[emmet_ls = {
+          capabilities = snip_caps,
+          filetypes = {
+            "css",
+            "vue",
+            "svelete",
+            "html",
+            "javascriptreact",
+            "less",
+            "sass",
+            "scss",
+            "typescriptreact",
+          },
+        },--]]
+        html = {},
+        cssls = {},
+        cssmodules_ls = {},
+        bashls = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
